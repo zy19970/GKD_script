@@ -1,7 +1,7 @@
 {
   id: 1400965095,
   name: 'zy19970 的 GKD 规则',
-  version: 1,
+  version: 2,
   author: 'zy19970',
   checkUpdateUrl: './gkd.version.json5',
   supportUri: 'https://github.com/zy19970/GKD_script',
@@ -37,6 +37,30 @@
                 },
                 duration: 300,
               },
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'com.sgcc.wsgw.cn',
+      name: '网上国网',
+      groups: [
+        {
+          key: 10001,
+          name: '功能类-自动签到',
+          desc: '在首页检测到“签到”入口后自动点击',
+          activityIds:
+            'com.sgcc.wsgw.rnbundle.activity.HomeReactActivity',
+          matchRoot: true,
+          actionMaximum: 1,
+          rules: [
+            {
+              key: 0,
+              fastQuery: true,
+              matches:
+                'ViewGroup[desc="签到"][focusable=true][visibleToUser=true]',
+              action: 'clickCenter',
             },
           ],
         },
