@@ -1,0 +1,46 @@
+{
+  id: 1400965095,
+  name: 'zy19970 的 GKD 规则',
+  version: 1,
+  author: 'zy19970',
+  checkUpdateUrl: './gkd.version.json5',
+  supportUri: 'https://github.com/zy19970/GKD_script',
+  categories: [],
+  globalGroups: [],
+  apps: [
+    {
+      id: 'com.ss.android.ugc.aweme',
+      name: '抖音',
+      groups: [
+        {
+          key: 10001,
+          name: '功能类-自动上滑继续观看短剧',
+          desc: '检测到“上滑继续观看短剧”后自动上滑',
+          activityIds:
+            'com.ss.android.ugc.aweme.playlet.videodetail.PlayletVideoPlayActivity',
+          matchRoot: true,
+          rules: [
+            {
+              key: 0,
+              matches:
+                '[text="上滑继续观看短剧"][visibleToUser=true]',
+              action: 'swipe',
+              actionCd: 3000,
+              swipeArg: {
+                start: {
+                  x: 'screenWidth * 0.50',
+                  y: 'screenHeight * 0.72',
+                },
+                end: {
+                  x: 'screenWidth * 0.50',
+                  y: 'screenHeight * 0.28',
+                },
+                duration: 300,
+              },
+            },
+          ],
+        },
+      ],
+    },
+  ],
+}
