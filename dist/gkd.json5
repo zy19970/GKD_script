@@ -1,7 +1,7 @@
 {
   id: 1400965095,
   name: 'zy19970 的 GKD 规则',
-  version: 3,
+  version: 4,
   author: 'zy19970',
   updateUrl:
     'https://fastly.jsdelivr.net/gh/zy19970/GKD_script@main/dist/gkd.json5',
@@ -64,6 +64,40 @@
               matches:
                 'ViewGroup[desc="签到"][focusable=true][visibleToUser=true]',
               action: 'clickCenter',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'com.kuaishou.nebula',
+      name: '快手极速版',
+      groups: [
+        {
+          key: 10001,
+          name: '功能类-自动上滑继续观看短剧',
+          desc: '检测到“上滑继续观看短剧”后自动上滑',
+          activityIds:
+            'com.yxcorp.gifshow.detail.PhotoDetailActivity',
+          matchRoot: true,
+          rules: [
+            {
+              key: 0,
+              matches:
+                '[vid="tube_slide_limit_bottom_bar_text"][text="上滑继续观看短剧"][visibleToUser=true]',
+              action: 'swipe',
+              actionCd: 3000,
+              swipeArg: {
+                start: {
+                  x: 'screenWidth * 0.50',
+                  y: 'screenHeight * 0.72',
+                },
+                end: {
+                  x: 'screenWidth * 0.50',
+                  y: 'screenHeight * 0.28',
+                },
+                duration: 300,
+              },
             },
           ],
         },
