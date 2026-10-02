@@ -1,9 +1,12 @@
 {
   id: 1400965095,
   name: 'zy19970 的 GKD 规则',
-  version: 2,
+  version: 3,
   author: 'zy19970',
-  checkUpdateUrl: './gkd.version.json5',
+  updateUrl:
+    'https://fastly.jsdelivr.net/gh/zy19970/GKD_script@main/dist/gkd.json5',
+  checkUpdateUrl:
+    'https://fastly.jsdelivr.net/gh/zy19970/GKD_script@main/dist/gkd.version.json5',
   supportUri: 'https://github.com/zy19970/GKD_script',
   categories: [],
   globalGroups: [],
