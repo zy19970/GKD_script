@@ -1,7 +1,7 @@
 {
   id: 1400965095,
   name: 'zy19970 的 GKD 规则',
-  version: 4,
+  version: 5,
   author: 'zy19970',
   updateUrl:
     'https://fastly.jsdelivr.net/gh/zy19970/GKD_script@main/dist/gkd.json5',
@@ -25,20 +25,22 @@
           rules: [
             {
               key: 0,
+              fastQuery: true,
               matches:
                 '[text="上滑继续观看短剧"][visibleToUser=true]',
               action: 'swipe',
-              actionCd: 3000,
+              actionDelay: 200,
+              actionCd: 300,
               swipeArg: {
                 start: {
                   x: 'screenWidth * 0.50',
-                  y: 'screenHeight * 0.72',
+                  y: 'screenHeight * 0.60',
                 },
                 end: {
                   x: 'screenWidth * 0.50',
-                  y: 'screenHeight * 0.28',
+                  y: 'screenHeight * 0.30',
                 },
-                duration: 300,
+                duration: 200,
               },
             },
           ],
