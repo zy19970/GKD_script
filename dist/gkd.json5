@@ -1,7 +1,7 @@
 {
   id: 1400965095,
   name: 'zy19970 的 GKD 规则',
-  version: 5,
+  version: 6,
   author: 'zy19970',
   updateUrl:
     'https://fastly.jsdelivr.net/gh/zy19970/GKD_script@main/dist/gkd.json5',
@@ -100,6 +100,30 @@
                 },
                 duration: 300,
               },
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'com.eg.android.AlipayGphone',
+      name: '支付宝',
+      groups: [
+        {
+          key: 10001,
+          name: '功能类-自动点击今日签到',
+          desc: '支付宝会员页面检测到“今日签到”按钮后自动点击',
+          activityIds:
+            'com.alipay.mobile.nebulax.xriver.activity.XRiverActivity',
+          matchRoot: true,
+          actionMaximum: 1,
+          rules: [
+            {
+              key: 0,
+              fastQuery: true,
+              matches:
+                'TextView[text^="今日签到"][visibleToUser=true]',
+              action: 'clickCenter',
             },
           ],
         },
