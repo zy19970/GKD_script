@@ -1,7 +1,7 @@
 {
   id: 1400965095,
   name: 'zy19970 的 GKD 规则',
-  version: 7,
+  version: 8,
   author: 'zy19970',
   updateUrl:
     'https://fastly.jsdelivr.net/gh/zy19970/GKD_script@main/dist/gkd.json5',
@@ -121,8 +121,9 @@
             {
               key: 0,
               fastQuery: true,
+              forcedTime: 5000,
               matches:
-                '@View[clickable=true][width<400][height<400] >n TextView[text^="今日签到"][visibleToUser=true]',
+                '@View[clickable=true][width<400][height<400] > TextView[text="每日签到"][visibleToUser=true]',
               action: 'click',
             },
           ],
